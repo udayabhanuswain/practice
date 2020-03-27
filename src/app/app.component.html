@@ -1,0 +1,21 @@
+ 
+ <form #heroForm="ngForm">
+ First name: <input  type="text" name="fname" [(ngModel)]="fname"><br>
+  Last name: <input type="text" name="lname" [(ngModel)]="lname"><br>
+
+<input type="submit" (click)='onSave()' value="Submit">
+
+<input type="submit" (click)='onSaves(heroForm.value)' value="MySubmit">
+</form>
+
+
+<ng-container *ngIf="Repdata">
+  <p>{{Repdata.token}}</p>
+  <p>{{Repdata.id}}</p>
+  <p>{{Repdata.geo}}</p>
+</ng-container>
+
+<ng-container *ngIf="Repdata2">
+  <p>{{Repdata2.fname}}</p>
+  <p>{{Repdata2.lname}}</p>
+</ng-container>
